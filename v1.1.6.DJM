@@ -588,6 +588,11 @@ ON TOKEN CHANGE/CREATE
                 SmartAoE.ObserveTokenChange(function(obj,prev){
                     handleToken(obj, prev, "NO");
                 });
+            if('undefined' !== typeof ScriptCards && ScriptCards.ObserveTokenChange){
+                ScriptCards.ObserveTokenChange(function(obj,prev){
+                    handleToken(obj, prev, "NO");
+                });
+            }; 
             };
         };
     //RETURN OUTSIDE FUNCTIONS------------
